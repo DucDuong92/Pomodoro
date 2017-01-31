@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pomodoro</string>
+    <string name="login">Đăng nhập</string>
+    <string name="action_settings"></string>
+    <string name="password">Mật Khẩu</string>
+    <string name="register">Đăng ký</string>
+    <string name="username">Tài Khoản</string>
+</resources>
