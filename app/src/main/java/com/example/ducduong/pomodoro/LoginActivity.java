@@ -27,6 +27,27 @@ public class LoginActivity extends AppCompatActivity {
                 attemptLogin();
             }
         });
+        btRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                attemptRegister();
+            }
+        });
+    }
+
+    private void attemptRegister() {
+        String username = etUsername.getText().toString();
+        String password = etPassword.getText().toString();
+
+        if (username.equals("admin") && password.equals("admin")){
+            // Notifications
+            Toast.makeText(this, "Register success", Toast.LENGTH_SHORT).show();
+        }
+        if (!username.equals("admin") || !password.equals("admin")){
+            // Notifications
+            Toast.makeText(this, "Register fail", Toast.LENGTH_SHORT).show();
+        }
+
     }
 
     private void attemptLogin() {
@@ -36,6 +57,10 @@ public class LoginActivity extends AppCompatActivity {
         if (username.equals("admin") && password.equals("admin")){
             // Notifications
             Toast.makeText(this, "Logged in", Toast.LENGTH_SHORT).show();
+        }
+        if (!username.equals("admin") || !password.equals("admin")){
+            // Notifications
+            Toast.makeText(this, "Login fail", Toast.LENGTH_SHORT).show();
         }
     }
 
